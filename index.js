@@ -43,11 +43,15 @@ router.post('/login',async (ctx) => {
     }
   );
   ctx.body = ctx.request.body;
+});
+
+router.get('/projects',async (ctx) => {
+  console.log("projects");
 })
 
 
-app.use(server(__dirname + '/public'));
 
+app.use(server(__dirname + '/public'));
 
 //启动路由 ，设置响应头
 app.use(router.routes()).use(router.allowedMethods());

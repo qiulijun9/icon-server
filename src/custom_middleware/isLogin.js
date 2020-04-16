@@ -4,6 +4,7 @@ const isLogin = async function (ctx, next){
     console.log("没有登录");
     ctx.response.redirect('/login');
   }
+  // ctx.response.redirect('/project');
   console.log("在线。。。。。");
   await next();
 };
